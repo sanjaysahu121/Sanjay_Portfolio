@@ -1,4 +1,4 @@
-/* Base Styles and Variables */
+/* Base Styles and Variables (As Provided) */
 :root {
     --color-bg: #0A192F; /* Dark Blue Tech Background */
     --color-primary: #00bcd4; /* Vibrant Cyan (Tech Blue) */
@@ -62,7 +62,7 @@ body {
 }
 
 .section-padding {
-    padding: 4rem 0; /* Mobile default */
+    padding: 8rem 0; /* Original padding */
 }
 
 .text-center {
@@ -87,17 +87,17 @@ nav {
     height: 60px;
 }
 
+/* NOTE: This hides navigation links on small screens in the original non-responsive structure */
+.nav-container > div {
+    display: block; 
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-primary);
     text-decoration: none;
     padding: 0 1rem;
-}
-
-/* Mobile: Hide navigation links */
-.nav-container > div {
-    display: none;
 }
 
 .nav-link {
@@ -120,7 +120,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,8 +140,8 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-primary);
     animation: fadeIn 1s ease-out;
-    width: 90%;
     max-width: 600px;
+    margin: 0 auto;
 }
 
 @keyframes fadeIn {
@@ -150,21 +150,21 @@ nav {
 }
 
 .hero h1 {
-    font-size: 2.5rem; /* Mobile size */
+    font-size: 4rem; /* Original Desktop Size */
     margin-bottom: 0.5rem;
     color: var(--color-primary);
     text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
 }
 
 .hero h2 {
-    font-size: 1.2rem; /* Mobile size */
+    font-size: 1.5rem; /* Original Desktop Size */
     font-weight: 300;
     margin-bottom: 2rem;
 }
 
 .profile-pic {
-    width: 150px; /* Mobile size */
-    height: 150px;
+    width: 200px; /* Original Desktop Size */
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--color-primary);
@@ -177,10 +177,11 @@ nav {
     transform: scale(1.05) rotate(2deg);
 }
 
+/* Button Colors (Restored to working original state) */
 .btn-primary {
     background-color: var(--color-primary);
     color: var(--color-bg);
-    padding: 0.75rem 1.5rem; /* Adjusted padding */
+    padding: 0.75rem 2rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -212,7 +213,7 @@ nav {
 
 /* Sections Titles */
 .section-title {
-    font-size: 2rem; /* Mobile size */
+    font-size: 2.5rem; /* Original Desktop Size */
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--color-primary);
@@ -232,8 +233,8 @@ nav {
 
 .section-subtitle {
     color: var(--color-muted);
-    margin-bottom: 2.5rem; /* Mobile size */
-    font-size: 1rem;
+    margin-bottom: 3rem; 
+    font-size: 1.1rem;
 }
 
 /* About & Education */
@@ -243,59 +244,65 @@ nav {
 }
 
 /* ------------------------------------------- */
-/* TIMELINE (Mobile-First: Single Column)      */
+/* TIMELINE (Original Desktop Layout)          */
 /* ------------------------------------------- */
 
 .timeline {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .timeline-line {
-    display: none; /* Hide line on mobile */
+    position: absolute;
+    width: 4px; /* Thicker line */
+    background-color: var(--color-border);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    display: block; 
 }
 
 .timeline-item {
     padding: 10px 0;
     position: relative;
-    width: 100%; /* Full width on mobile */
-    left: 0;
-    text-align: left; /* All text aligned left on mobile */
-    margin-bottom: 1.5rem;
+    width: 50%; /* Two-column width */
 }
 
-/* Remove side padding from default styles for mobile */
-.timeline-item:nth-child(odd) { 
-    left: 0; 
-    padding-right: 0; 
-    padding-left: 2rem; /* Give space for the pseudo-dot alignment */
-    text-align: left; 
+/* Left Side Items */
+.timeline-item-left {
+    left: 0;
+    padding-right: 3rem; 
+    text-align: right; 
 }
-.timeline-item:nth-child(even) { 
-    left: 0; 
-    padding-left: 2rem; 
-    padding-right: 0;
+
+.timeline-item-left .timeline-dot {
+    right: -10px; 
+    left: auto;
+}
+
+/* Right Side Items */
+.timeline-item-right {
+    left: 50%;
+    padding-left: 3rem; 
+    text-align: left;
+}
+
+.timeline-item-right .timeline-dot {
+    left: -10px; 
+    right: auto;
 }
 
 .timeline-dot {
     position: absolute;
-    width: 15px; /* Smaller dot for mobile */
-    height: 15px;
+    width: 20px;
+    height: 20px;
     background-color: var(--color-primary);
-    border: 3px solid var(--color-bg);
-    top: 30px; /* Adjust vertical position */
+    border: 4px solid var(--color-bg);
+    top: 25px;
     border-radius: 50%;
     z-index: 10;
-    left: 10px; /* Align dots on the left edge */
-}
-
-/* Ensure all dots align to the left on mobile */
-.timeline-item:nth-child(odd) .timeline-dot,
-.timeline-item:nth-child(even) .timeline-dot {
-    left: 10px; 
-    right: auto;
 }
 
 .timeline-card {
@@ -333,15 +340,15 @@ nav {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Adaptive grid for mobile */
-    gap: 1rem; /* Smaller gap on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Original minimum size */
+    gap: 1.5rem;
 }
 
 .skill-card {
     background: var(--color-card);
     backdrop-filter: blur(10px);
     border: 1px solid var(--color-glass);
-    padding: 1rem; /* Smaller padding on mobile */
+    padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
     transition: var(--transition);
@@ -351,26 +358,20 @@ nav {
 }
 
 .skill-card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-10px) scale(1.02);
     border-color: var(--color-primary);
-    box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
-}
-
-.skill-card h4 {
-    font-size: 1rem; /* Mobile size */
-    margin-top: 0.75rem;
-    color: var(--color-primary);
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.5);
 }
 
 /* Font Awesome Icon Base Style for Skills/Contact */
 .skill-icon i, .contact-icon i {
-    font-size: 2rem; /* Mobile size */
+    font-size: 2.2rem; 
     display: block;
     margin-bottom: 0.5rem;
     color: var(--color-primary);
 }
 
-/* Custom coloring for specific skill icons (as defined in original CSS) */
+/* Custom coloring for specific skill icons (retained) */
 .fa-square-poll-vertical { color: #1D6F42; }
 .fa-html5 { color: #E44D26; }
 .fa-css3-alt { color: #1572B6; }
@@ -386,35 +387,18 @@ nav {
     background: var(--color-card);
     backdrop-filter: blur(10px);
     border: 1px solid var(--color-glass);
-    padding: 1.5rem; /* Mobile padding */
+    padding: 2rem;
     border-radius: 12px;
     transition: var(--transition);
     box-shadow: var(--shadow-primary);
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 2rem;
 }
 
-.project-card:hover {
-    transform: scale(1.01);
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 20px rgba(142, 36, 170, 0.4);
-}
-
-.project-card h3 {
-    color: var(--color-primary);
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-card p {
-    color: var(--color-muted);
-    margin-bottom: 1rem;
-}
-
-/* Certificates Section */
+/* Certificates Section (Restored Original Layout) */
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* More columns on larger mobile/tablet */
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 1.5rem;
 }
 
 .certificate-item {
@@ -427,36 +411,47 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px; /* Smaller height on mobile */
+    height: 150px; /* Original Height */
     background-color: var(--color-card);
     color: var(--color-text);
     text-align: center;
-    font-size: 0.9rem;
 }
 
 .certificate-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.8);
 }
 
 .certificate-overlay {
-    background: rgba(0, 0, 0, 0.85); /* Darker overlay for better visibility */
-    padding: 0.5rem;
-    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.certificate-item:hover .certificate-overlay {
+    opacity: 1;
 }
 
 /* Contact Section and Direct Message Form Styles */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid for contact cards */
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     max-width: 900px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 3rem; 
 }
 
 .contact-info-card {
     background: var(--color-card);
-    padding: 1rem; /* Smaller padding */
+    padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--color-glass);
     text-align: center;
@@ -466,18 +461,10 @@ nav {
     box-shadow: var(--shadow-primary);
 }
 
-.contact-info-card h4 {
-    font-size: 1rem;
-}
-
-.contact-info-card p {
-    font-size: 0.8rem;
-}
-
 .direct-message-form {
     max-width: 600px;
     margin: 0 auto;
-    padding: 1.5rem; /* Smaller padding */
+    padding: 2rem;
     background: var(--color-card);
     border-radius: 12px;
     border: 1px solid var(--color-glass);
@@ -485,40 +472,16 @@ nav {
     text-align: left;
 }
 
-.direct-message-form label {
-    font-size: 0.9rem;
-}
-
-.direct-message-form button {
-    padding: 0.75rem;
-    font-size: 1rem;
-}
-
 /* Footer */
 footer {
-    padding: 1.5rem 0; /* Smaller padding */
+    padding: 2rem 0;
     border-top: 1px solid var(--color-border);
     text-align: center;
     color: var(--color-muted);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
-.social-links a {
-    font-size: 1.3rem; /* Smaller icons */
-    margin: 0 0.4rem;
-}
-
-.social-links a i {
-    font-size: 1.3rem;
-}
-
-/* Modal */
-.modal-content {
-    width: 95%; 
-    max-width: 900px;
-}
-
-/* Scroll Animation Styles */
+/* Scroll Animation Styles (UNCHANGED) */
 .animated-element {
     opacity: 0;
     transform: translateY(30px);
@@ -531,104 +494,85 @@ footer {
 }
 
 /* ------------------------------------------- */
-/* Media Queries for Tablets and Desktops      */
+/* Media Queries for Responsiveness FIXES      */
 /* ------------------------------------------- */
 
-@media (min-width: 768px) {
-    /* Navigation: Show full navigation links */
-    .nav-container > div {
-        display: flex;
-    }
-    
-    /* General Spacing */
-    .section-padding { 
-        padding: 6rem 0; 
-    }
-    
-    /* Hero */
-    .hero-content {
-        padding: 4rem;
-    }
-    .hero h1 { 
-        font-size: 4rem; 
-    }
-    .hero h2 { 
-        font-size: 1.5rem; 
-    }
-    .profile-pic {
-        width: 200px;
-        height: 200px;
-    }
-    .section-title { 
-        font-size: 2.5rem; 
-    }
-    
-    /* Skills: More columns */
-    .skills-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
-    }
-
-    /* Certificates: Larger grid items */
-    .certificates-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-    /* Contact: More columns */
-    .contact-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-    
-    /* ------------------------------------------- */
-    /* TIMELINE (Desktop/Tablet: Two Column)       */
-    /* ------------------------------------------- */
-    
-    .timeline {
-        padding: 2rem 0;
-    }
-    
+@media (max-width: 767px) {
+    /* Timeline: Force single column on small screens */
     .timeline-line {
-        display: block; /* Show line */
-        left: 50%;
+        left: 20px; 
+        margin-left: 0;
+        width: 2px;
     }
-
     .timeline-item {
-        width: 50%;
-        margin-bottom: 3rem;
-        padding: 10px 0;
-    }
-
-    /* Left Side Items */
-    .timeline-item:nth-child(odd) {
-        left: 0;
-        padding-right: 3rem; /* Space from center line */
-        padding-left: 0;
-        text-align: right; /* Text aligned to the right */
-    }
-
-    .timeline-item:nth-child(odd) .timeline-dot {
-        right: -10px; /* Position dot on the right side of the item (center line) */
-        left: auto;
-    }
-    
-    /* Right Side Items */
-    .timeline-item:nth-child(even) {
-        left: 50%;
-        padding-left: 3rem; /* Space from center line */
-        padding-right: 0;
+        width: 100%;
+        padding-left: 40px; 
         text-align: left;
     }
-
-    .timeline-item:nth-child(even) .timeline-dot {
-        left: -10px; /* Position dot on the left side of the item (center line) */
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0; 
+        padding-right: 0; 
+        text-align: left; 
+    }
+    .timeline-dot {
+        left: 13px;
         right: auto;
     }
     
-    .timeline-dot {
-        width: 20px;
-        height: 20px;
-        border: 4px solid var(--color-bg);
+    /* General Mobile Adjustments */
+    .nav-container > div {
+        display: none; /* Hide nav links on mobile */
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero h2 { font-size: 1.2rem; }
+    .profile-pic { width: 150px; height: 150px; }
+    .section-padding { padding: 4rem 0; }
+    .skills-grid { gap: 0.8rem; }
+    .contact-grid { gap: 1rem; }
+
+    /* Certificates: Adjusted for slightly smaller mobile view */
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    /* Desktop Nav visibility */
+    .nav-container > div {
+        display: block;
+    }
+
+    /* Restore center line for Tablet/Desktop */
+    .timeline-line {
+        width: 4px; 
+        left: 50%;
+        margin-left: -2px;
+    }
+
+    /* Restore two-column layout */
+    .timeline-item {
+        width: 50%;
+    }
+    .timeline-item-left {
+        padding-right: 3rem;
+        padding-left: 0;
+        text-align: right;
+    }
+    .timeline-item-right {
+        left: 50%;
+        padding-left: 3rem;
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item-left .timeline-dot {
+        right: -10px;
+        left: auto;
+    }
+    .timeline-item-right .timeline-dot {
+        left: -10px;
+        right: auto;
     }
 }
