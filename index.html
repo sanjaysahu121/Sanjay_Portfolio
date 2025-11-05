@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Kumar - Data Science</title>
+    <meta name="description" content="Portfolio of Sanjay Kumar, MCA Data Science student specializing in Python, AI, Cloud Computing, and DBMS with a passion for secure and data-driven solutions.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container container">
+            <a href="#hero" class="logo">SANJAY KUMAR</a>
+            <div>
+                <button class="nav-link" onclick="scrollToSection('about')">About</button>
+                <button class="nav-link" onclick="scrollToSection('skills')">Skills</button>
+                <button class="nav-link" onclick="scrollToSection('projects')">Projects</button>
+                <button class="nav-link" onclick="scrollToSection('certificates')">Certificates</button>
+                <button class="nav-link" onclick="scrollToSection('contact')">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <img src="sanjay_1.jpg" alt="Sanjay Kumar Profile Photo" class="profile-pic animated-element">
+            <h1 class="animated-element">Sanjay Kumar</h1>
+            <h2 class="animated-element">Aspiring Data Scientist | Data Anaylst </h2>
+            <p class="section-subtitle animated-element" style="color: white;">MCA Data Science Student | Transforming data into secure, impactful solutions</p>
+            
+            <button class="btn-primary animated-element" onclick="scrollToSection('projects')">Explore My Work</button>
+            <button class="btn-primary btn-secondary animated-element" onclick="scrollToSection('resume')">
+                <i class="fa-solid fa-download"></i> Download Resume
+            </button>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title animated-element">About Me</h2>
+            <p class="section-subtitle animated-element">A quick snapshot of my academic journey and technical interests.</p>
+            <div class="about-content animated-element" style="max-width: 800px; margin: 0 auto; text-align: left;">
+                <p>As a future Data Science professional currently pursuing my MCA, I thrive on navigating complex data to surface actionable insights and drive smart decisions. My current focus is sharpening my technical arsenal: mastering data manipulation using Python (NumPy/Pandas), developing models with Machine Learning frameworks, utilizing MYSQL for database management, and exploring Cloud platforms (AWS) for scalable deployment. I approach every challenge, from theoretical concepts to real-world projects, with intense curiosity and the perseverance required to deliver meaningful results. I am committed to leveraging technological excellence to contribute innovative solutions to the field.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education" class="section-padding" style="background-color: #0d2441;">
+        <div class="container text-center">
+            <h2 class="section-title animated-element">Education & Academic History</h2>
+            <p class="section-subtitle animated-element">My journey through formal education, building a strong tech foundation.</p>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item timeline-item-left animated-element">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <p class="timeline-year">2025 - 2027 (Current)</p>
+                        <h3 class="timeline-title">Master of Computer Applications (MCA)</h3>
+                        <p class="timeline-institution">Lovely Professional University (LPU)</p>
+                        <p style="color: var(--color-primary);">Specialization: Data Science</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-item-right animated-element">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <p class="timeline-year">2022 - 2025</p>
+                        <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
+                        <p class="timeline-institution">Bundelkhand University Jhansi</p>
+                        <p style="color: var(--color-primary);">Result: 78.20%</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-item-left animated-element">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <p class="timeline-year">2021 - 2022</p>
+                        <h3 class="timeline-title">Class 12th (Intermediate)</h3>
+                        <p class="timeline-institution">CBSE Board</p>
+                        <p style="color: var(--color-primary);">Result: 78.20%</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-item-right animated-element">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <p class="timeline-year">2019 - 2020</p>
+                        <h3 class="timeline-title">Class 10th (Matriculation)</h3>
+                        <p class="timeline-institution">CBSE Board</p>
+                        <p style="color: var(--color-primary);">Result: 85.20%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title animated-element">Skills & Tech Stack</h2>
+            <p class="section-subtitle animated-element">The tools and technologies I use for coding, data analysis, and building systems.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card animated-element">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-python"></i>
+                    </div> 
+                    <h4>Python</h4>
+                    <p style="color: var(--color-muted); font-size: 0.85rem;">Core programming for Data Science & AI.</p>
+                </div>
+                
+                <div class="skill-card animated-element">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-square-poll-vertical"></i>
+                    </div>
+                    <h4>MS Excel</h4>
+                    <p style="color: var(--color-muted); font-size: 0.85rem;">Data cleaning, manipulation, and reporting.</p>
+                </div>
+                
+                <div class="skill-card animated-element">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h4>HTML5</h4>
+                    <p style="color: var(--color-muted); font-size: 0.85rem;">Structuring the web content.</p>
+                </div>
+                
+                <div class="skill-card animated-element">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <h4>CSS</h4>
+                    <p style="color: var(--color-muted); font-size: 0.85rem;">Styling and responsive design.</p>
+                </div>
+                
+                <div class="skill-card animated-element">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <h4>JavaScript</h4>
+                    <p style="color: var(--color-muted); font-size: 0.85rem;">Adding interactivity to front-end.</p>
+                </div>
+                
+                <div class="skill-card animated-element">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h4>Artificial Intelligence</h4>
+                    <p style="color: var(--color-muted); font-size: 0.85rem;">Fundamentals of ML models and implementation.</p>
+                </div>
+                
+                <div class="skill-card animated-element">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h4>Cloud Computing</h4>
+                    <p style="color: var(--color-muted); font-size: 0.85rem;">Basic understanding of cloud platforms.</p>
+                </div>
+                
+                <div class="skill-card animated-element">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h4>DBMS/SQL</h4>
+                    <p style="color: var(--color-muted); font-size: 0.85rem;">Database management and query writing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding" style="background-color: #0d2441;">
+        <div class="container text-center">
+            <h2 class="section-title animated-element">Featured Projects</h2>
+            <p class="section-subtitle animated-element">Applying theoretical knowledge to solve practical problems.</p>
+            
+            <div class="project-card animated-element" style="max-width: 800px; margin: 0 auto 2rem;">
+                <h3>Portfolio Website Design</h3>
+                <p>This project is the portfolio website you are viewing. It showcases skills in HTML, CSS, and JavaScript for responsive, dark-themed, and animated web design, providing a modern platform to display my technical work.</p>
+                <a href="https://sanjaysahu121.github.io/" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fa-solid fa-up-right-from-square" style="color: var(--color-secondary); font-size: 1.1rem;"></i> View Live Site
+                </a>
+                <div style="margin-top: 1rem; color: var(--color-muted); font-size: 0.85rem;">
+                    <span style="display: inline-block; padding: 0.3rem 0.6rem; background-color: rgba(0, 188, 212, 0.2); border-radius: 4px; margin-right: 0.5rem;">Web Development</span>
+                    <span style="display: inline-block; padding: 0.3rem 0.6rem; background-color: rgba(142, 36, 170, 0.2); border-radius: 4px;">Frontend</span>
+                </div>
+            </div>
+
+            <div class="project-card animated-element" style="max-width: 800px; margin: 0 auto;">
+                <h3>True Density Determination of Pharmaceutical Powders</h3>
+                <p>This project involves creating a system or methodology for accurately determining the true density of pharmaceutical powders, a critical parameter in quality control and formulation development.</p>
+                <a href="https://github.com/sanjaysahu121/True-Density-determination-of-Pharmacrutical-Powders-" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fa-brands fa-github" style="color: var(--color-secondary); font-size: 1.1rem;"></i> View on GitHub
+                </a>
+                <div style="margin-top: 1rem; color: var(--color-muted); font-size: 0.85rem;">
+                    <span style="display: inline-block; padding: 0.3rem 0.6rem; background-color: rgba(0, 188, 212, 0.2); border-radius: 4px; margin-right: 0.5rem;">Data Science</span>
+                    <span style="display: inline-block; padding: 0.3rem 0.6rem; background-color: rgba(142, 36, 170, 0.2); border-radius: 4px;">Pharmaceuticals</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="certificates" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title animated-element">Certificates Showcase</h2>
+            <p class="section-subtitle animated-element">Certifications validating my dedication to continuous learning and skill development.</p>
+
+            <div class="certificates-grid">
+                <div class="certificate-item animated-element" onclick="openModal('c++oops.jpeg', 'Object Oriented Programming Using C++')">
+                    C++ OOP Certificate
+                    <div class="certificate-overlay">C++ OOP (ALCoders)</div>
+                </div>
+                <div class="certificate-item animated-element" onclick="openModal('pwc certificate.jpeg', 'PW Skills x PwC Immersion Program')">
+                    PwC Immersion Certificate
+                    <div class="certificate-overlay">PwC 1-Day Immersion Program (08-10-2025)</div>
+                </div>
+                <div class="certificate-item animated-element" onclick="openModal('tech_blitz.jpeg', 'Tech Blitz 2025 Hackathon')">
+                    Tech Blitz Certificate
+                    <div class="certificate-overlay">Tech Blitz Hackathon (Coding Ninjas LPU)</div>
+                </div>
+                <div class="certificate-item animated-element" onclick="openModal('comuunication.jpeg', 'Microsoft Communication Skills')">
+                    Communication Skills Certificate
+                    <div class="certificate-overlay">Communication Skills (Microsoft/NSDC)</div>
+                </div>
+                <div class="certificate-item animated-element" onclick="openModal('skill india.jpeg', 'NCVET SOAR - AI to be Aware')">
+                    AI to be Aware Certificate
+                    <div class="certificate-overlay">SOAR - AI to be Aware (NCVET/Microsoft)</div>
+                </div>
+                <div class="certificate-item animated-element" onclick="openModal('Ai to be aware.jpeg', 'Physics Wallah Masterclass')">
+                    Physics Wallah Masterclass Certificate
+                    <div class="certificate-overlay">Degree is Your Launchpad (PW Masterclass)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="certModal" class="modal" onclick="closeModal()">
+        <span class="close-btn" title="Close Modal">&times;</span>
+        <img class="modal-content" id="modalImage" style="display: none;">
+        <div id="modalMessageContainer"></div>
+    </div>
+
+    <section id="contact" class="section-padding" style="background-color: #0d2441;">
+        <div class="container text-center">
+            <h2 class="section-title animated-element">Get In Touch</h2>
+            <p class="section-subtitle animated-element">Let's connect to discuss data, AI, and career opportunities.</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:sanjay.all.inbox@gmail.com" class="contact-info-card animated-element">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <p>sanjay.all.inbox@gmail.com</p>
+                </a>
+                <a href="tel:+91955487842" class="contact-info-card animated-element">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h4>Phone</h4>
+                    <p>+91 955487842</p>
+                </a>
+                <a href="https://www.linkedin.com/in/sanjay-kumar-350892281" target="_blank" rel="noopener noreferrer" class="contact-info-card animated-element">
+                    <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <h4>LinkedIn</h4>
+                    <p>Connect Professionally</p>
+                </a>
+                <a href="https://github.com/sanjaysahu121" target="_blank" rel="noopener noreferrer" class="contact-info-card animated-element">
+                    <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                    <h4>GitHub</h4>
+                    <p>View My Codebase</p>
+                </a>
+                <a href="https://www.instagram.com/sanjay.sahu.121" target="_blank" rel="noopener noreferrer" class="contact-info-card animated-element">
+                    <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <h4>Instagram</h4>
+                    <p>Follow My Updates</p>
+                </a>
+                <a href="https://x.com/Sanjaysahu2511" target="_blank" rel="noopener noreferrer" class="contact-info-card animated-element">
+                    <div class="contact-icon"><i class="fa-brands fa-x-twitter"></i></div>
+                    <h4>X (Twitter)</h4>
+                    <p>Follow Me Here</p>
+                </a>
+            </div>
+
+            <h3 class="section-title animated-element" style="margin-top: 4rem; font-size: 2rem;">Send Me a Direct Message</h3>
+            <p class="section-subtitle animated-element" style="margin-bottom: 2rem;">Use the form below for immediate contact.</p>
+            
+            <form id="contactForm" class="direct-message-form animated-element" action="https://formspree.io/f/mpwogoqr" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="phone">Contact Number</label>
+                <input type="text" id="phone" name="phone" required placeholder="Enter your phone number">
+                
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                
+                <label for="description">Message Description</label>
+                <textarea id="description" name="description" rows="5" required placeholder="Tell me about your inquiry or opportunity"></textarea>
+                
+                <button type="submit" class="btn-primary">Send Message</button>
+                
+                <p style="text-align: center; margin-top: 0.5rem; color: var(--color-muted); font-size: 0.8rem;"> Message delivered instantly to my primary inbox.</p>
+                
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sanjay Kumar. Built with Passion for Data Science.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sanjay-kumar-350892281" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/sanjay.sahu.121" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/Sanjaysahu2511" target="_blank" rel="noopener noreferrer" title="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="mailto:sanjay.all.inbox@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/sanjaysahu121" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+					<i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
